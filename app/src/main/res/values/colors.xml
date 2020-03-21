@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f51e4a</color>
+    <color name="colorPrimaryDark">#A84003</color>
+    <color name="colorAccent">#FFE424</color>
+
+    <color name="colorNavigationIcon">#FA8125</color>
+    <color name="colorNavigationText">#FFB61F</color>
+
+    //biar cepet
+    <color name="colorNull">#00000000</color>
+    <color name="colorIcons">#E3E4E6</color>
+    <color name="colorPrimaryText">#1e1e1e</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteDark">#DBDBDB</color>
+    <color name="colorPrimaryLight">#CA7474</color>
+    <color name="colorBackground">#F4F7F7</color>
+</resources>

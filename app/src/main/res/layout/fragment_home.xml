@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.HomeFragment"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/Tittle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_fix"
+                android:textColor="@color/colorWhite" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Tittle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="#E4E0E0"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/ic_search_primary_light"
+                    android:drawableLeft="@drawable/ic_search_primary_light"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="Searching..."
+                    android:textColor="@color/colorPrimaryLight" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/layout_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/cardSearch"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:foregroundGravity="center"
+                android:overScrollMode="never"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPagerHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_below="@id/cardSearch"
+                        android:layout_marginTop="8dp"
+                        android:clipToPadding="false"
+                        android:foregroundGravity="center"
+                        android:overScrollMode="never" />
+
+                    <TextView
+                        android:id="@+id/tittle_vpHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardSearch"
+                        android:gravity="center"
+                        android:text="Trending..."
+                        android:textColor="#83292828"
+                        android:layout_marginTop="230dp"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/tittleCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_viewPager"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:text="Category"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tittleCategory">
+
+                <include
+                    android:id="@+id/shimmerCategory"
+                    layout="@layout/item_recycler_category_shimmer" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mark1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/layoutCategory"
+                android:layout_marginLeft="8dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sepecial Ayam"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/layoutCategory"
+                    android:paddingTop="25dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHome_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </FrameLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mark2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/mark1"
+                android:layout_marginLeft="8dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Special Mie"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/layoutCategory"
+                    android:paddingTop="25dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHome_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </FrameLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mark3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/mark2"
+                android:layout_marginLeft="8dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Angkringan Jogja"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/layoutCategory"
+                    android:paddingTop="25dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHome_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </FrameLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mark4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/mark3"
+                android:layout_marginLeft="8dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Korean Food"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/layoutCategory"
+                    android:paddingTop="25dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHome_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </FrameLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/mark4"
+                android:src="@drawable/logo_fix" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

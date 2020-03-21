@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dicodingtraining.tumbas">
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_tumbas"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BasicActivity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Resto.Activity.MieNyinyir" />
+        <activity android:name=".Resto.Activity.AngkringanPakMan" />
+        <activity android:name=".Resto.Activity.Kimchi" />
+        <activity android:name=".Resto.Activity.Gacoan" />
+        <activity android:name=".Resto.Activity.ChickenCrush" />
+        <activity android:name=".Resto.Activity.AyamGepuk" />
+        <activity android:name=".BasicActivity.RegisterActivity" />
+        <activity android:name=".BasicActivity.LoginActivity" />
+        <activity android:name=".BasicActivity.RestoActivity" />
+        <activity android:name=".BasicActivity.MenuActivity" />
+        <activity
+            android:name=".BasicActivity.CategoryActivity"
+            android:parentActivityName=".BasicActivity.MainActivity" />
+        <activity android:name=".BasicActivity.MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>

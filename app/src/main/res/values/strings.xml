@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tumbas</string>
+
+    //Button Navigation
+    <string name="home">Home</string>
+    <string name="Invocie">Invoice</string>
+    <string name="Barcode">barcode</string>
+    <string name="account">Account</string>
+    <string name="discount">Discount</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="login">Login</string>
+
+
+</resources>
